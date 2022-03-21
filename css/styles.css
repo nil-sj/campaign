@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   width: 100%;
@@ -39,8 +43,13 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 5px;
+  transition: visibility 0 ease 0.3s;
   z-index: 10;
   box-shadow: 0 3px 2px -2px hsla(217, 19%, 35%, 0.7);
+}
+
+.hide {
+  visibility: hidden;
 }
 
 .logo-link {
@@ -126,6 +135,8 @@ header {
   align-self: flex-start;
   gap: 2.5rem;
   padding: 0 9.5rem 0 7.5rem;
+  position: absolute;
+  z-index: 4;
 }
 
 .navbar-brand {
@@ -188,7 +199,7 @@ img#header-img {
   color: #ACDF87;
 }
 
-.nav-link:active {
+.nav-link.active {
   color: #ffffff;
 }
 
@@ -207,13 +218,62 @@ img#header-img {
   background-color: #ACDF87;
 }
 
+.content-section {
+  min-height: 120vh;
+}
+
 section#hero {
   background: url("../img/hero-image.jpg");
-  background-position: 40% 60%;
-  /* background-position: right center; */
+  /* background-position: 60% 80%; */
+  background-position: center bottom;
   background-repeat: no-repeat;
-  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  /* position: relative;
+  background: white;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 120%;
+  background-size: cover;
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url("../img/hero-image.jpg"); */
 }
+
+.container {
+  background-color: green;
+  width: 100%;
+  height: 100%;
+  margin: 0 7rem;
+  padding: 2rem 2rem;
+}
+
+.gradient-bg {
+  /* border: 1px solid red; */
+  position: relative;
+  z-index: 1;
+  top: -30vh;
+  padding: 0 7rem;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30vh;
+  background-position: center top;
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url("https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png");
+}
+
+.feature-offset {
+  /* border: 1px solid green; */
+  min-height: 80vh;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
+
+
 
 @media only screen and (max-width: 992px) {
 
@@ -235,6 +295,10 @@ section#hero {
     padding: 0 2.5rem 0 2.5rem;
   }
 
+  .container {
+    margin: 0;
+  }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -249,6 +313,10 @@ section#hero {
 
   .navbar {
     padding: 0 1.5rem 0 2.5rem;
+  }
+
+  .container {
+    padding: 1rem 1rem;
   }
 
 }

@@ -17,3 +17,37 @@ document.querySelectorAll(".nav-link").forEach(link => {
     navMenu.classList.remove("active");
   });
 });
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  if (pageYOffset >= 56) {
+      if (!document.querySelector(".logo-box").classList.contains("hide")) {
+          document.querySelector(".logo-box").classList.add("hide");
+      }
+  }
+
+  if (pageYOffset < 56) {
+      if (document.querySelector(".logo-box").classList.contains("hide")) {
+        document.querySelector(".logo-box").classList.remove("hide");
+      }
+  }
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach((navLink) => {
+    navLink.classList.remove("active");
+    if (navLink.classList.contains(current)) {
+      navLink.classList.add("active");
+    }
+  });
+});
