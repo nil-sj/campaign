@@ -1,7 +1,11 @@
 const today = new Date();
 const year = today.getFullYear();
 
-document.querySelector(".year").textContent = year;
+document.querySelectorAll(".year").forEach(eachElem => {
+    eachElem.textContent = year;
+});
+
+
 
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
