@@ -16,12 +16,6 @@ body {
   height: 100%;
 }
 
-/* header {
-  height: 6.5rem;
-  display: flex;
-  flex-direction: column;
-} */
-
 .collapse-bar {
   height: 3.5rem;
   background-color: #ACDF87;
@@ -131,7 +125,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* justify-content: flex-start; */
   align-self: flex-start;
   gap: 2.5rem;
   padding: 0 9.5rem 0 7.5rem;
@@ -228,7 +221,6 @@ section#hero.content-section {
 
 section#hero {
   background: url("../img/welcome-bg.jpg");
-  /* background-position: 60% 80%; */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -242,7 +234,6 @@ section#hero {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* border: 1px solid black; */
   margin-top: 10vh;
   max-width: 800px;
   text-align: center;
@@ -298,9 +289,7 @@ section#hero {
 .caption-para {
   font-size: 1.5rem;
   font-weight: 500;
-  /* letter-spacing: 0.2rem; */
   color: white;
-  /* text-transform: uppercase; */
   text-shadow: 3px 3px 5px hsla(217, 19%, 35%, 0.3);
   margin: 1.5rem 0;
   padding: 1rem 1rem;
@@ -326,7 +315,6 @@ section#hero {
 }
 
 .container {
-  /* background-color: green; */
   width: 100%;
   height: 100%;
   margin: 0 7rem;
@@ -337,17 +325,13 @@ section#hero {
 }
 
 section#features {
-  /* background-color: green; */
   padding: 0 7rem;
   width: 100%;
 }
 
 .feature-offset {
-  /* border: 1px solid green; */
   min-height: 80vh;
   background-color: #ffffff;
-  /* position: relative;
-  top: -20vh; */
   padding-top: 20vh;
   display: flex;
   gap: 1rem;
@@ -364,30 +348,14 @@ section#features {
   box-shadow: 0px 2px 5px #555;
 }
 
-/* .card:hover .card-image img {
-  filter: grayscale(0);
-} */
-
 .card-image {
   height: 270px;
-  /* position: relative; */
-  /* overflow: hidden; */
 }
 
 
 .card-image img {
   width: 360px;
   height: 270px;
-
-  /* width: 100%;
-  position:absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
-
-  /* filter: grayscale(1);
-  transition-property: filter;
-  transition-duration: .3s; */
 }
 
 .card-body {
@@ -435,8 +403,6 @@ section#features {
   background-color: black;
   color: white;
 }
-
-
 
 section#how-it-works {
   background: url("../img/sky.jpg");
@@ -633,8 +599,6 @@ footer a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* margin-top: 1rem;
-  margin-bottom: 1rem; */
   padding: 1rem 1rem;
 }
 
@@ -796,11 +760,6 @@ footer a:hover {
     transform: translateY(-0.5rem) rotate(-45deg);
   }
 
-  .navbar {
-    /* position: absolute; */
-    /* z-index: 5; */
-  }
-
   .nav-menu {
     position: fixed;
     left: -100%;
@@ -895,7 +854,6 @@ footer a:hover {
 
   .three-links-div {
     margin: 0;
-    /* gap: 0.5rem; */
   }
 
   .sample-copyright {
@@ -922,9 +880,3 @@ footer a:hover {
   }
 
 }
-
-
-
-/* media queries at
--below 992px: instead of 7rem spacing make 1rem left, and 0 on right
--below 768px; */
