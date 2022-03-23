@@ -40,8 +40,9 @@
       <div class="hero-content">
         <h1 class="caption">Welcome</h1>
         <p class="caption-desc">to a hassle free way to camp<p>
-          <form id="form">
-            <input class="email-box" type="text" name="email" /><a href="#" class="subscribe-btn">subscribe</a>
+          <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <input class="email-box" type="text" name="email" id="email" placeholder="Enter Your Email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required />
+            <input id="submit" type="submit" class="subscribe-btn" value="SUBSCRIBE">
           </form>
         <p class="caption-para">
           Explorations marred by painstaking prep-work? Leave that burden on us. We run Campaign, so you do "Camping without Pain!".
